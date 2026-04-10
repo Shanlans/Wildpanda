@@ -1,6 +1,6 @@
-# Coding Agent Governance Framework
+# Wildpanda
 
-A reusable governance system for AI coding agents (Claude Code, etc.) that provides structured task lifecycle management, multi-tenancy support, and repository bootstrap tooling.
+A reusable governance framework for AI coding agents (Claude Code, etc.) that provides structured task lifecycle management, multi-tenancy support, and repository bootstrap tooling.
 
 ## What This Is
 
