@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Wildpanda Logo" width="180" />
+  <img src="assets/logo.png" alt="Wildpanda Logo" width="120" />
 </p>
 
 <h1 align="center">Wildpanda</h1>
