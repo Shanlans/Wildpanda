@@ -29,6 +29,12 @@ Contribute governance improvements from a consuming project back to the upstream
 
 ## Trigger
 - **Manual only**: user invokes the skill when they want to contribute changes back.
+- **Keyword triggers** (any of these phrases activates this skill):
+  - "agent 更新"
+  - "agent 变更发布"
+  - "贡献回上游"
+  - "contribute back"
+  - "push changes upstream"
 
 ## Contribution Flow
 
