@@ -2,7 +2,10 @@
 
 All notable changes to Wildpanda are documented in this file.
 
-## [Unreleased]
+## [1.1.1] — 2026-04-10
+
+### Contributors
+- shanlan.shen (@Shanlans)
 
 ### Contributed from RAWHDR
 - Added keyword triggers to `governance-contribute` and `governance-release` skills (Chinese + English phrases for natural invocation)
