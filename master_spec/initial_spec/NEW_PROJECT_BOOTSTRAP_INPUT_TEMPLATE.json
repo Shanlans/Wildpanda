@@ -1,0 +1,27 @@
+{
+  "repo_name": "<repository_display_name>",
+  "repo_id": "<repository_id>",
+  "repo_root": "<absolute_repo_root>",
+  "full_build_command": "<full_build_command>",
+  "runtime_smoke_command": "<runtime_smoke_command>",
+  "runtime_workdir": "<runtime_workdir>",
+  "test_entry": [
+    "<test_entry_file_1>",
+    "<test_entry_file_2>"
+  ],
+  "third_party_exclusions": [
+    "<third_party_glob_1>",
+    "<third_party_glob_2>"
+  ],
+  "skill_registry": [
+    "bootstrap-governance"
+  ],
+  "release_pipeline": [
+    "<pipeline_step_1>",
+    "<pipeline_step_2>"
+  ],
+  "default_acceptance_profile": "A1_Spec_Only",
+  "owner": "Codex",
+  "bootstrap_date": "<yyyy-mm-dd>",
+  "force": false
+}

@@ -1,0 +1,30 @@
+{
+  "repo_name": "ExampleVisionRepo",
+  "repo_id": "example_vision_repo",
+  "repo_root": "E:/Work/ExampleVisionRepo",
+  "full_build_command": "msbuild .\\ExampleVisionRepo.sln /t:Build /p:Configuration=Release /p:Platform=x64",
+  "runtime_smoke_command": ".\\x64\\Release\\ExampleVisionRepo_Test.exe sample_input.raw ExampleCfg",
+  "runtime_workdir": ".\\Data\\Smoke",
+  "test_entry": [
+    "ExampleVisionRepo_Test/main.cpp"
+  ],
+  "third_party_exclusions": [
+    "3rdparty/**",
+    "external/**"
+  ],
+  "skill_registry": [
+    "bootstrap-governance",
+    "version-patch-bump",
+    "git-commit-and-push"
+  ],
+  "release_pipeline": [
+    "version-patch-bump",
+    "acceptance-build-and-run",
+    "svn-log-from-version",
+    "git-commit-and-push"
+  ],
+  "default_acceptance_profile": "A1_Spec_Only",
+  "owner": "Codex",
+  "bootstrap_date": "2026-03-17",
+  "force": false
+}

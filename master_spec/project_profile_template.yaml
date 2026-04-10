@@ -1,0 +1,53 @@
+governance:
+  framework_version: "1.0.0"
+
+project:
+  id: "<project_id>"
+  name: "<project_name>"
+  repo_root: "<repo_root>"
+  profile_version: "v1"
+
+paths:
+  master_spec: "master_spec/master_spec.md"
+  skill_spec: "master_spec/skill_spec/skill_spec.md"
+  skill_catalog: "master_spec/skill_spec/skill_catalog.md"
+  chat_spec: "master_spec/chat_spec/chat_spec.md"
+  chat_index: "master_spec/chat_spec/chat_index.md"
+  initial_spec: "master_spec/initial_spec/initial_spec.md"
+  comment_spec: "master_spec/comment_spec/comment_spec.md"
+  comment_status: "master_spec/comment_spec/comment_status.md"
+  env_spec: "master_spec/env_spec.md"
+  task_spec: "master_spec/task_spec/task_spec.md"
+  acceptance_catalog: "master_spec/acceptance_spec/acceptance_catalog.md"
+  flow_catalog: "master_spec/flow_spec/flow_catalog.md"
+  procedure_catalog: "master_spec/procedure_spec/procedure_catalog.md"
+  task_root: "task"
+  task_archive: "task/Achieve"
+  test_entry:
+    - "<test_entry_file_1>"
+    - "<test_entry_file_2>"
+
+build:
+  default_profile: "<default_acceptance_profile>"
+  full_build:
+    command: "<full_build_command>"
+    workdir: "."
+  runtime_smoke:
+    command: "<runtime_smoke_command>"
+    workdir: "<runtime_workdir>"
+
+skills:
+  registry:
+    - "<skill_name_1>"
+    - "<skill_name_2>"
+  release_pipeline:
+    - "<pipeline_step_1>"
+    - "<pipeline_step_2>"
+
+chat:
+  stale_threshold_hours: 4
+
+exclusions:
+  third_party:
+    - "<third_party_glob_1>"
+    - "<third_party_glob_2>"
