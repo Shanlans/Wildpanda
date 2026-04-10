@@ -2,6 +2,11 @@
 
 All notable changes to Wildpanda are documented in this file.
 
+## [Unreleased]
+
+### Contributed from RAWHDR
+- Added keyword triggers to `governance-contribute` and `governance-release` skills (Chinese + English phrases for natural invocation)
+
 ## [1.1.0] - 2026-04-10
 
 ### Governance Skill Suite

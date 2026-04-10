@@ -30,6 +30,12 @@ Prepare a versioned release pull request for the Wildpanda governance framework.
 
 ## Trigger
 - **Manual only**: maintainer invokes the skill when ready to cut a release.
+- **Keyword triggers** (any of these phrases activates this skill):
+  - "agent 发布正式版本"
+  - "agent 正式发布"
+  - "发布新版本"
+  - "prepare release"
+  - "cut a release"
 
 ## Run Environment
 - Can be run from any project or any environment. The skill operates on the Wildpanda repo remotely via GitHub API and temp directory clone.
