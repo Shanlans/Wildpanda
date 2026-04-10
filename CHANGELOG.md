@@ -3,11 +3,20 @@
 All notable changes to Wildpanda are documented in this file.
 
 
-## [Unreleased]
+## [1.2.0] — 2026-04-10
 
-### Contributed from RAWHDR
-- Replaced SVG logo with PNG (AI-generated muscular panda)
-- Updated README logo reference and reduced display size to 120px
+### Added
+- Redesigned README.md with centered layout, shields.io badges, navigation bar, ASCII architecture diagram, and governance lifecycle flow chart (#3)
+- AI-generated muscular panda PNG logo (`assets/logo.png`) (#4, #5)
+- Mandatory README Check section in governance-contribute and governance-release skills (#3)
+- Keyword triggers for governance-contribute and governance-release skills (#3)
+
+### Removed
+- Placeholder SVG logo (`assets/logo.svg`) (#4, #5)
+
+### Contributors
+- shanlan.shen (@Shanlans)
+
 
 ## [1.1.1] — 2026-04-10
 
