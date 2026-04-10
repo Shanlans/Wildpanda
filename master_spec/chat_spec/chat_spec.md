@@ -16,6 +16,10 @@
 0. Confirm governance state:
   - if project is still `initial-only` (only `AGENTS.md` or incomplete required governance roots), run initialization flow from `master_spec/initial_spec/initial_spec.md` first.
   - if governance state is already initialized, continue with normal continuity checks below.
+0.5. Governance sync check:
+  - If `governance.upstream_repo` is defined in `project_profile.yaml`, run `governance-sync` pre-check (compare local `upstream_commit` with remote latest commit via GitHub API).
+  - If an update is available, notify user with version change summary. Do NOT auto-update without user confirmation.
+  - If `gh` CLI is not available or not authenticated, skip silently (do not block session resume).
 1. Scan active task files under `task/*.md` (exclude templates).
 2. Detect unfinished tasks by `Current Phase` not equal to `Archived` (or equivalent completed terminal state).
 3. If unfinished tasks exist:
@@ -171,3 +175,13 @@ On session resume, the agent scans the Active Task Index and evaluates each acti
 - Grandfathered tasks are treated as **stale by default** during takeover evaluation.
 - A new session can claim a grandfathered task with a single confirmation prompt (same flow as stale takeover in §7.3.4 case 2).
 - Once claimed, the task follows normal heartbeat rules going forward (chat_id set, heartbeat updated on writes).
+
+#### 7.3.6 In-Session Rule Activation (Self-Apply)
+
+When a new governance rule is created and takes effect during the current session (e.g., a new spec section is written that defines runtime fields or behavioral requirements), the agent must immediately apply that rule to the current session itself. This includes but is not limited to:
+- Generating a `chat_id` if §7.3.1 was just defined and the session has none.
+- Backfilling `Last Heartbeat At` on all tasks owned by the current session.
+- Updating `chat_index.md` to reflect the newly required columns or fields.
+- Any other runtime state field that the new rule declares mandatory.
+
+Rationale: without this rule, a session that defines a governance rule will not follow it until the next session — creating a gap where the defining session is the only one that violates its own rule.

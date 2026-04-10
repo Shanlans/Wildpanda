@@ -44,6 +44,11 @@
 - `master_spec/task_spec/NEW_PROJECT_BOOTSTRAP_TASK_TEMPLATE.md`
 - `master_spec/read_audit_spec/read_audit_spec.md`
 - `master_spec/read_audit_spec/READ_AUDIT_TEMPLATE.md`
+- `master_spec/initial_spec/governance_template_boundary.md`
+- `skill/bootstrap-governance/SKILL.md`
+- `skill/governance-sync/SKILL.md`
+- `skill/governance-contribute/SKILL.md`
+- `skill/governance-release/SKILL.md`
 
 ### 3.2 Instance-Owned
 - `project_profile.yaml`
@@ -145,3 +150,4 @@
 ## 8. Change Log
 - 2026-03-16: Initial template-boundary definition created for agent-system template reuse and decoupling.
 - 2026-04-08: Added `master_spec/read_audit_spec/read_audit_spec.md` and `READ_AUDIT_TEMPLATE.md` to template-owned list. Task: `task/GovernanceAuditCleanup_2026_04_08.md`.
+- 2026-04-10: Added `governance_template_boundary.md`, `bootstrap-governance`, `governance-sync`, `governance-contribute`, `governance-release` skill paths to template-owned list. Task: `Wildpanda_v1.1.0_GovernanceSkills`.

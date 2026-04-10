@@ -1,5 +1,9 @@
 governance:
-  framework_version: "1.0.0"
+  framework_version: "<version>"
+  upstream_repo: "Shanlans/Wildpanda"
+  upstream_branch: "master"
+  upstream_commit: "<commit_hash>"
+  last_sync_at: "<YYYY-MM-DDTHH:MM>"
 
 project:
   id: "<project_id>"

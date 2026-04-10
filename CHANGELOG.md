@@ -2,6 +2,40 @@
 
 All notable changes to Wildpanda are documented in this file.
 
+## [1.1.0] - 2026-04-10
+
+### Governance Skill Suite
+
+Three new skills enabling governance lifecycle management for consuming projects:
+
+#### New Skills
+- `skill/governance-sync/SKILL.md` — Pull template-owned file updates from upstream Wildpanda into consuming projects. Triggered during session continuity check or manually. Compares local vs remote via GitHub API, presents diffs, overwrites on user confirmation.
+- `skill/governance-contribute/SKILL.md` — Contribute governance improvements back to Wildpanda via pull request. Forks upstream, creates temp clone, copies selected files, drafts CHANGELOG entry, bumps VERSION, commits with `Co-Authored-By`, creates PR.
+- `skill/governance-release/SKILL.md` — Prepare a versioned release PR for Wildpanda. Collects merged PRs since last tag, builds change summary, updates VERSION/CHANGELOG/CONTRIBUTORS, creates release PR. Maintainer merges and tags on GitHub.
+
+#### Self-Governance Rules (`AGENTS.md` §12)
+- PR-only policy for master branch (effective after v1.1.0)
+- PR requirements: CHANGELOG entry + VERSION bump + Co-Authored-By
+- Contributor tracking via `CONTRIBUTORS.md`
+- Version semantics: patch / minor / major
+- Self-application: Wildpanda follows its own task lifecycle
+- Release process via governance-release skill (PR only, maintainer merges)
+- Merge authority: only maintainer merges PRs and creates tags
+
+#### New Files
+- `CONTRIBUTORS.md` — contributor list with GitHub handle and first contribution version
+
+#### Template Updates
+- `project_profile_template.yaml` — governance section expanded from 1 field to 5: `framework_version`, `upstream_repo`, `upstream_branch`, `upstream_commit`, `last_sync_at`
+- `chat_spec.md` §3 — added step 0.5: governance-sync check during session continuity
+- `chat_spec.md` §7.3.6 — added "In-Session Rule Activation" requiring agent to self-apply newly created governance rules within the same session
+- `governance_template_boundary.md` §3.1 — added 3 new skill directories and `governance_template_boundary.md` itself to template-owned list
+
+#### Runtime Dependencies
+- All 3 new skills require GitHub CLI (`gh`) with pre-check flow: detect on PATH → verify auth → install guidance per OS
+
+---
+
 ## [1.0.0] - 2026-04-10
 
 ### Initial Release

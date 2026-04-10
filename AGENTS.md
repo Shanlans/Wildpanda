@@ -172,4 +172,43 @@ When you read this file everytime, Give the phrase: "Agents 正在加载".
 - Scope includes: `master_spec/**`, `master_spec/flow_spec/**`, `master_spec/procedure_spec/**`, `master_spec/acceptance_spec/**`, `<subproject>/Spec/**`, and `task/**`.
 - If an existing non-English section is touched, convert that section to English in the same change.
 
+## 12) Self-Governance Rules
+
+These rules govern the Wildpanda repository itself. They take effect after the v1.1.0 release.
+
+### 12.1) PR-Only Policy
+- The `master` branch is protected. All changes must be submitted via pull request.
+- Direct pushes to `master` are prohibited after v1.1.0.
+- Exception: the v1.1.0 release itself is the last direct push (transitional).
+
+### 12.2) PR Requirements
+Every pull request to Wildpanda must include:
+1. A `CHANGELOG.md` entry under `## [Unreleased]` describing the change.
+2. A `VERSION` bump (patch, minor, or major) if the PR is a release PR.
+3. A `Co-Authored-By:` trailer in at least one commit identifying the contributor.
+
+### 12.3) Contributor Tracking
+- `CONTRIBUTORS.md` records all contributors.
+- When a PR is merged, the contributor (from `Co-Authored-By`) must be added to `CONTRIBUTORS.md` if not already listed.
+- The `governance-release` skill automates this during release PR preparation.
+
+### 12.4) Version Semantics
+- **Patch** (`x.y.Z`): typo fixes, formatting corrections, non-functional changes.
+- **Minor** (`x.Y.0`): new spec sections, new fields, new skills, backward-compatible additions.
+- **Major** (`X.0.0`): breaking changes to template-owned file structure, governance workflow, or sync protocol.
+
+### 12.5) Self-Application
+- Wildpanda itself follows the task lifecycle defined in `master_spec/task_spec/task_spec.md`.
+- Changes to Wildpanda should be tracked via task files when the scope warrants it.
+
+### 12.6) Release Process
+- Releases are prepared via the `governance-release` skill.
+- The skill creates a release PR. It never merges automatically.
+- The maintainer reviews, merges the PR, and creates the version tag on GitHub.
+
+### 12.7) Merge Authority
+- Only the repository maintainer (or users with write access) may merge pull requests.
+- Only the maintainer creates version tags on the merge commit.
+- Automated merge or auto-tag is not permitted.
+
 After all Agents file finished read, give "Agents 已加载完毕".
