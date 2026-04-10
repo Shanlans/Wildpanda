@@ -2,6 +2,15 @@
 
 All notable changes to Wildpanda are documented in this file.
 
+
+## [Unreleased]
+
+### Contributed from RAWHDR
+- Redesigned README.md with centered layout, shields.io badges, navigation bar, ASCII architecture diagram, and governance lifecycle flow chart
+- Added muscular panda SVG logo (`assets/logo.svg`)
+- Added mandatory README Check section to governance-contribute and governance-release skills
+- Added keyword triggers to governance-contribute and governance-release skills
+
 ## [1.1.1] — 2026-04-10
 
 ### Contributors
@@ -9,6 +18,7 @@ All notable changes to Wildpanda are documented in this file.
 
 ### Contributed from RAWHDR
 - Added keyword triggers to `governance-contribute` and `governance-release` skills (Chinese + English phrases for natural invocation)
+
 
 ## [1.1.0] - 2026-04-10
 

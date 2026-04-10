@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="#1a1a2e" stroke="#e94560" stroke-width="4"/>
+
+  <!-- Body - muscular torso -->
+  <ellipse cx="200" cy="260" rx="85" ry="95" fill="white"/>
+  <!-- Chest shadow / muscle definition -->
+  <path d="M160 220 Q200 200 240 220 Q240 250 200 245 Q160 250 160 220Z" fill="#e8e8e8" opacity="0.6"/>
+  <!-- Chest line -->
+  <line x1="200" y1="210" x2="200" y2="270" stroke="#d0d0d0" stroke-width="2" opacity="0.5"/>
+
+  <!-- Arms - buff -->
+  <!-- Left arm -->
+  <ellipse cx="120" cy="230" rx="35" ry="55" fill="#333" transform="rotate(15, 120, 230)"/>
+  <!-- Left bicep highlight -->
+  <ellipse cx="115" cy="215" rx="18" ry="25" fill="#444" transform="rotate(15, 115, 215)"/>
+  <!-- Left fist -->
+  <circle cx="108" cy="178" r="20" fill="#333"/>
+
+  <!-- Right arm -->
+  <ellipse cx="280" cy="230" rx="35" ry="55" fill="#333" transform="rotate(-15, 280, 230)"/>
+  <!-- Right bicep highlight -->
+  <ellipse cx="285" cy="215" rx="18" ry="25" fill="#444" transform="rotate(-15, 285, 215)"/>
+  <!-- Right fist -->
+  <circle cx="292" cy="178" r="20" fill="#333"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="130" rx="72" ry="65" fill="white"/>
+
+  <!-- Ears -->
+  <circle cx="138" cy="80" r="25" fill="#333"/>
+  <circle cx="262" cy="80" r="25" fill="#333"/>
+
+  <!-- Eye patches (panda markings) -->
+  <ellipse cx="170" cy="125" rx="28" ry="22" fill="#333" transform="rotate(-10, 170, 125)"/>
+  <ellipse cx="230" cy="125" rx="28" ry="22" fill="#333" transform="rotate(10, 230, 125)"/>
+
+  <!-- Eyes - comic style with glint -->
+  <ellipse cx="170" cy="123" rx="12" ry="14" fill="white"/>
+  <ellipse cx="230" cy="123" rx="12" ry="14" fill="white"/>
+  <circle cx="174" cy="120" r="7" fill="#1a1a2e"/>
+  <circle cx="234" cy="120" r="7" fill="#1a1a2e"/>
+  <!-- Eye glints -->
+  <circle cx="177" cy="117" r="2.5" fill="white"/>
+  <circle cx="237" cy="117" r="2.5" fill="white"/>
+
+  <!-- Eyebrows - tough look -->
+  <path d="M148 105 Q165 95 192 108" stroke="#333" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M252 105 Q235 95 208 108" stroke="#333" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <ellipse cx="200" cy="143" rx="10" ry="7" fill="#333"/>
+
+  <!-- Smirk / cocky grin -->
+  <path d="M175 155 Q200 172 230 155" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Tooth -->
+  <rect x="195" y="155" width="10" height="8" rx="2" fill="white" stroke="#333" stroke-width="1"/>
+
+  <!-- Belt -->
+  <rect x="125" y="300" width="150" height="12" rx="4" fill="#e94560"/>
+  <rect x="190" y="297" width="20" height="18" rx="3" fill="#ffd700" stroke="#e94560" stroke-width="1"/>
+
+  <!-- Sweat drop (comic effect) -->
+  <path d="M290 100 Q295 85 292 70 Q300 85 295 100Z" fill="#4fc3f7" opacity="0.8"/>
+
+  <!-- Action lines (comic speed lines) -->
+  <line x1="90" y1="170" x2="60" y2="155" stroke="#e94560" stroke-width="2" opacity="0.6"/>
+  <line x1="85" y1="190" x2="50" y2="185" stroke="#e94560" stroke-width="2" opacity="0.4"/>
+  <line x1="310" y1="170" x2="340" y2="155" stroke="#e94560" stroke-width="2" opacity="0.6"/>
+  <line x1="315" y1="190" x2="350" y2="185" stroke="#e94560" stroke-width="2" opacity="0.4"/>
+
+  <!-- Star sparks around fists -->
+  <polygon points="105,160 108,155 111,160 108,163" fill="#ffd700"/>
+  <polygon points="295,160 298,155 301,160 298,163" fill="#ffd700"/>
+</svg>

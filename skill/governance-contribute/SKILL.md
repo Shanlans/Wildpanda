@@ -127,6 +127,11 @@ Contribute governance improvements from a consuming project back to the upstream
 - Remove temp directory `/tmp/wildpanda-contrib-<timestamp>/`.
 - If cleanup fails, warn user with path for manual removal.
 
+## README Check (Mandatory)
+- Before creating the PR, check whether the contributed changes affect any capability described in `README.md` (e.g., new skill, new feature, changed workflow).
+- If yes: update `README.md` in the same PR to reflect the change.
+- If no: no action needed.
+
 ## Important Notes
 - Only template-owned files (§3.1) can be contributed. Instance-owned, runtime, and hybrid files are excluded.
 - The contribution is always a PR. It is never merged automatically.

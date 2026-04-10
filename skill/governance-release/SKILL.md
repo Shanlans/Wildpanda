@@ -186,6 +186,11 @@ Display to user:
 - Remove temp directory `/tmp/wildpanda-release-<timestamp>/`.
 - If cleanup fails, warn user with path for manual removal.
 
+## README Check (Mandatory)
+- Before creating the release PR, review the merged PRs for any changes that affect capabilities described in `README.md` (e.g., new skills, changed workflows, new features).
+- If yes: update `README.md` in the same release PR to reflect all relevant changes.
+- If no: no action needed.
+
 ## Important Notes
 - This skill only creates a PR. It never merges to the main branch automatically.
 - Only the maintainer merges the release PR and creates the tag on GitHub.
