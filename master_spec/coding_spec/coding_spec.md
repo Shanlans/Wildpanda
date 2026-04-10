@@ -27,13 +27,10 @@
 - Prefer explicit constants over magic numbers when reused.
 
 2. Cross-platform compatibility (mandatory)
-- New/modified code must compile on both Android toolchain and MSVC toolchain.
-- Avoid MSVC-only secure CRT APIs in cross-platform code paths, including but not limited to:
-  - `fopen_s`
-  - `strcpy_s` / `strncpy_s`
-  - `sprintf_s` / `snprintf_s` variants that are not portable across target toolchains
-- Prefer portable alternatives (or local wrappers) that are available on both Android and MSVC.
-- If platform-specific implementation is unavoidable, isolate it behind explicit platform macros and provide both branches.
+- New/modified code must compile on all target toolchains declared in `project_profile.yaml` or `master_spec/env_spec.md`.
+- Avoid toolchain-specific APIs in cross-platform code paths unless isolated behind explicit platform macros with both branches provided.
+- Prefer portable alternatives (or local wrappers) that are available across all target toolchains.
+- Project-specific toolchain restrictions and prohibited API lists should be documented in the project's instance-owned `env_spec.md`.
 
 3. Control flow
 - Favor early-return for invalid states.
@@ -68,35 +65,15 @@
   - Verification must follow real object/dataflow, not variable-name matching only.
   - When formal parameter names and actual argument names differ, trace ownership/lifetime through caller-callee dataflow before deciding whether `Clear()/reset/delete` is required.
 
-8. Image-class cleanup scope (mandatory)
-- The following image/data-array classes are under mandatory lifecycle check for timely `Clear()` when confirmed no longer needed in subsequent context (cross-stage / cross-function / cross-file):
-  - `CBGRImage`
-  - `CGrayImageShort`
-  - `CGrayImage`
-  - `CLabelImage32`
-  - `CYUV422Image`
-  - `CMultiChannelImage`
-  - `CMultiChannelImage_WORD`
-  - `CMultiChannelImage_BYTE`
-  - `CCFAImage`
-  - `CMultiChannelImage_FLOAT`
-  - `CImageDataArray_BYTE`
-  - `CImageDataArray_WORD`
-  - `CImageDataArray_SHORT`
-  - `CImageDataArray_DWORD`
-  - `CImageDataArray_Int32`
-  - `CImageDataArray_UInt32`
-  - `CImageDataArray_UInt64`
-  - `CImageDataArray_Int64`
-  - `CBasicImageArray_FLOAT`
-  - `CYUV420Image`
-  - `CYUV420ImageV2`
-  - `CYUV444Image`
-  - `CY4UVImage`
-- Rule:
-  - If these objects are context-local and confirmed unused afterwards, call `Clear()` as soon as practical.
+8. Project-specific resource class cleanup scope
+- Projects that manage heavyweight resource objects (e.g., image buffers, GPU handles, large data arrays) should declare their mandatory-cleanup class list in one of:
+  - `project_profile.yaml` → `coding.lifecycle_check_classes`
+  - An instance-owned extension section in the project's own `coding_spec.md`
+- Rule (template-level):
+  - If resource objects are context-local and confirmed unused afterwards, release/clear as soon as practical.
   - If they are still consumed by downstream context, keep them alive and defer cleanup.
-  - For class members reused across requests/stages, enforce explicit `Clear()/reset` at the confirmed terminal point of their usage chain.
+  - For class members reused across requests/stages, enforce explicit release/reset at the confirmed terminal point of their usage chain.
+- The specific class names and cleanup method names (e.g., `Clear()`, `Release()`, `reset()`) are instance-owned and must not appear in this template spec.
 
 ## 5. Comment Rules Binding
 - This coding spec does not replace `master_spec/comment_spec/comment_spec.md`.
@@ -120,4 +97,5 @@
 - 2026-03-06: Added mandatory Android + MSVC compatibility rule; prohibited MSVC-only secure CRT usage in cross-platform paths.
 - 2026-03-06: Added mandatory memory/resource cleanup rules (new/delete pairing, no overwrite-after-new, image/member Clear timing, early-return unified cleanup).
 - 2026-03-06: Added explicit image-class cleanup scope list and mandatory Clear timing rule with cross-stage/cross-function/cross-file context check.
+- 2026-04-10: Decoupled project-specific content — moved Android/MSVC toolchain names to instance-owned env_spec, moved image class list to instance-owned scope. Template now provides generic rules only.
 
