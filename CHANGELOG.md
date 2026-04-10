@@ -3,6 +3,12 @@
 All notable changes to Wildpanda are documented in this file.
 
 
+## [Unreleased]
+
+### Contributed from RAWHDR
+- Decoupled coding_spec.md from project-specific content: Android/MSVC toolchain names moved to instance-owned env_spec, image class list moved to instance-owned coding_spec_instance.md
+- Added coding_spec_instance.md to instance-owned list in governance_template_boundary.md
+
 ## [1.2.0] — 2026-04-10
 
 ### Added

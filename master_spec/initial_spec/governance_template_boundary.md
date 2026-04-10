@@ -54,6 +54,7 @@
 - `project_profile.yaml`
 - `master_spec/master_spec.md`
 - `master_spec/env_spec.md`
+- `master_spec/coding_spec/coding_spec_instance.md` (project-specific coding rules, e.g., toolchain restrictions, resource class lists)
 - `master_spec/skill_spec/skill_catalog.md`
 - `master_spec/acceptance_spec/acceptance_catalog.md`
 - `master_spec/flow_spec/flow_catalog.md`
