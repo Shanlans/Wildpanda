@@ -2,6 +2,24 @@
 
 All notable changes to Wildpanda are documented in this file.
 
+## [1.4.0] — 2026-04-13
+
+### Added
+- New skill: readme-update — keeps README.md and README_zh.md in sync with framework state (version, triggers, features, diagrams). Auto-triggered during release and contribute; manual trigger: "update readme" (#19)
+- Command Reference section in both READMEs listing all skill trigger phrases in Chinese and English (#19)
+- `project.owner` field in project_profile_template.yaml for owner-based comment signatures (#19)
+
+### Changed
+- Removed Claude Code branding from READMEs; primary target changed to generic "LLM coding agents" (#19)
+- Replaced `@codex-comment` signature with `@<owner>-comment` (reads from `project_profile.yaml → project.owner`) across comment_spec, coding_spec, and AGENTS.md (#19)
+- governance-release now calls readme-update at Step 9.5 before release commit (#19)
+- governance-contribute README Check now delegates to readme-update skill (#19)
+- Increased README logo size from 120px to 240px (#18)
+- Fixed CJK alignment in Chinese README diagrams (#19)
+
+### Contributors
+- Shanlan (@Shanlans)
+
 ## [1.3.1] — 2026-04-13
 
 ### Changed

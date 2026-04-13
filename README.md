@@ -35,7 +35,7 @@
 
 Works with any LLM-based coding agent that reads markdown specs.
 
-> **Current version: v1.3.1**
+> **Current version: v1.4.0**
 
 ## 🤔 Why
 
