@@ -17,7 +17,16 @@
   - if project is still `initial-only` (only `AGENTS.md` or incomplete required governance roots), run initialization flow from `master_spec/initial_spec/initial_spec.md` first.
   - if governance state is already initialized, continue with normal continuity checks below.
 0.5. Governance sync check:
-  - If `governance.upstream_repo` is defined in `project_profile.yaml`, run `governance-sync` pre-check (compare local `upstream_commit` with remote latest commit via GitHub API).
+  - If `governance` section is missing from `project_profile.yaml`, initialize it with defaults:
+    ```yaml
+    governance:
+      framework_version: "unknown"
+      upstream_repo: "Shanlans/Wildpanda"
+      upstream_branch: "master"
+      upstream_commit: "unknown"
+      last_sync_at: "never"
+    ```
+  - If `governance.upstream_repo` is defined (including just-initialized default), run `governance-sync` pre-check (compare local `upstream_commit` with remote latest commit via GitHub API).
   - If an update is available, notify user with version change summary. Do NOT auto-update without user confirmation.
   - If `gh` CLI is not available or not authenticated, skip silently (do not block session resume).
 1. Scan active task files under `task/*.md` (exclude templates).
