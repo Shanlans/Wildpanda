@@ -3,6 +3,23 @@
 All notable changes to Wildpanda are documented in this file.
 
 
+## [1.3.0] — 2026-04-13
+
+### Added
+- New skill: call-graph — low-level utility for querying function call relationships using static analysis tools (ctags, cscope, pyan3, madge, go callgraph), 5 query types Q1-Q5 (#13)
+- New skill: flow-discovery — high-level flow spec generation using call-graph skill, 7-step discovery flow with user confirmation (#13)
+- README_zh.md — separate Chinese README with language switch links (#14)
+- AGENTS.md §8: flow-discovery trigger rule and call-graph-first rule (#13)
+- governance_template_boundary.md: call-graph and flow-discovery added to template-owned skill list (#13)
+
+### Changed
+- README.md split into separate English and Chinese files with mutual language switch links (#14)
+- All 6 skill trigger sections updated to bilingual Chinese + English (#13)
+- AGENTS.md prompts changed from Chinese to English (#13)
+
+### Contributors
+- Shanlan (@Shanlans)
+
 ## [1.2.3] — 2026-04-13
 
 ### Fixed
