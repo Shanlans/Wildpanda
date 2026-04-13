@@ -182,7 +182,14 @@ Display to user:
   gh api repos/<upstream_repo>/git/refs -f ref="refs/tags/v<proposed_version>" -f sha="<merge_commit_sha>"
   ```
 
-### Step 15: Cleanup
+### Step 15: Post-Release Sync Reminder
+- After the release PR is merged and tagged, if the current session is running inside a consuming project (i.e., `project_profile.yaml` has `governance.upstream_repo`):
+  - Prompt: "Release published. Run governance-sync now to align this project to v<proposed_version>? (Y/N)"
+  - On user approval: execute governance-sync immediately.
+  - On user decline: skip. The project will be prompted on next session start (§3 step 0.5).
+- If running standalone (not inside a consuming project): skip this step.
+
+### Step 16: Cleanup
 - Remove temp directory `/tmp/wildpanda-release-<timestamp>/`.
 - If cleanup fails, warn user with path for manual removal.
 
