@@ -3,10 +3,13 @@
 All notable changes to Wildpanda are documented in this file.
 
 
-## [Unreleased]
+## [1.2.3] — 2026-04-13
 
-### Contributed from RAWHDR
-- Fixed chat_spec.md §3 step 0.5: added automatic governance section initialization with defaults when missing from project_profile.yaml, so new projects get sync check on first session without manual setup
+### Fixed
+- chat_spec.md §3 step 0.5: added automatic governance section initialization with defaults when missing from project_profile.yaml, so new projects get sync check on first session without manual setup (#11)
+
+### Contributors
+- shanlan.shen (@Shanlans)
 
 ## [1.2.2] — 2026-04-13
 
