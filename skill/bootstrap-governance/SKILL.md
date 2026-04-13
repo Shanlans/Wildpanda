@@ -7,6 +7,16 @@ description: Use when a repository is adopting this governance system for the fi
 
 Use this skill when the user wants to onboard a new repository into this governance system or asks to bootstrap missing governance structure from templates.
 
+## Trigger / 触发条件
+- **Automatic / 自动**: during `chat_spec.md` §3 continuity check (step 0), if governance state is `initial-only`.
+  新 session 启动时，如果项目治理状态为 `initial-only`（只有 AGENTS.md 或治理结构不完整），自动触发。
+- **Manual / 手动**: user wants to onboard a new repository into governance.
+  用户想给新项目接入治理框架时手动调用。
+- **Keyword triggers / 关键词触发**:
+  - "初始化治理" / "initialize governance"
+  - "引导治理" / "bootstrap governance"
+  - "新项目接入" / "onboard new project"
+
 ## What This Skill Owns
 - Detect whether bootstrap is needed.
 - Route execution through the bootstrap governance documents in the correct order.

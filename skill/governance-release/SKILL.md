@@ -28,14 +28,15 @@ Prepare a versioned release pull request for the Wildpanda governance framework.
    - If running standalone or in the Wildpanda repo itself: default to `Shanlans/Wildpanda`.
    - If neither can be determined → prompt user for repo, **stop** until provided.
 
-## Trigger
-- **Manual only**: maintainer invokes the skill when ready to cut a release.
-- **Keyword triggers** (any of these phrases activates this skill):
-  - "agent 发布正式版本"
-  - "agent 正式发布"
-  - "发布新版本"
-  - "prepare release"
-  - "cut a release"
+## Trigger / 触发条件
+- **Manual only / 仅手动**: maintainer invokes the skill when ready to cut a release.
+  维护者准备发版时手动调用。
+- **Keyword triggers / 关键词触发** (any of these phrases activates this skill / 以下任意短语触发):
+  - "agent 发布正式版本" / "agent release official version"
+  - "agent 正式发布" / "agent official release"
+  - "发布新版本" / "prepare release"
+  - "发布" / "release"
+  - "打包发版" / "cut a release"
 
 ## Run Environment
 - Can be run from any project or any environment. The skill operates on the Wildpanda repo remotely via GitHub API and temp directory clone.
