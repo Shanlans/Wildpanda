@@ -128,8 +128,8 @@ Contribute governance improvements from a consuming project back to the upstream
 - If cleanup fails, warn user with path for manual removal.
 
 ## README Check (Mandatory)
-- Before creating the PR, check whether the contributed changes affect any capability described in `README.md` (e.g., new skill, new feature, changed workflow).
-- If yes: update `README.md` in the same PR to reflect the change.
+- Before creating the PR, check whether the contributed changes affect any capability described in `README.md` (e.g., new skill, new feature, changed workflow, trigger phrases).
+- If yes: run `skill/readme-update` to sync both READMEs, include changes in the same PR.
 - If no: no action needed.
 
 ## Important Notes

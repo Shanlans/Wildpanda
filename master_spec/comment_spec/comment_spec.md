@@ -41,10 +41,11 @@
 ## 4.1 Comment Template And Signature (Mandatory)
 - Agent-authored function comments must use a consistent signature line so comment ownership is traceable.
 - Required signature token:
-  - `@codex-comment`
+  - `@<owner>-comment` where `<owner>` is read from `project_profile.yaml → project.owner`.
+  - Example: if `project.owner: "shanlan"`, the signature is `@shanlan-comment`.
 - Required template (language can follow file/project convention):
 ```text
-/* @codex-comment
+/* @<owner>-comment
  * Input:
  * Output:
  * Key Steps:

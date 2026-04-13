@@ -8,6 +8,7 @@ governance:
 project:
   id: "<project_id>"
   name: "<project_name>"
+  owner: "<owner_name>"
   repo_root: "<repo_root>"
   profile_version: "v1"
 
