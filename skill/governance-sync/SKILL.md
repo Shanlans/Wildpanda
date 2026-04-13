@@ -35,10 +35,17 @@ Pull governance framework updates from the upstream Wildpanda repo into the curr
        last_sync_at: "never"
      ```
 
-## Trigger
-- **Automatic**: during `chat_spec.md` §3 continuity check (step 0.5), if `governance.upstream_repo` is defined.
-- **Manual**: user invokes the skill directly.
-- **Automatic behavior**: notify user if update available, do NOT auto-update without confirmation.
+## Trigger / 触发条件
+- **Automatic / 自动**: during `chat_spec.md` §3 continuity check (step 0.5), if `governance.upstream_repo` is defined.
+  每次新 session 启动时，如果 `project_profile.yaml` 配置了 `governance.upstream_repo`，自动检查上游更新。
+- **Manual / 手动**: user invokes the skill directly.
+  用户直接调用。
+- **Automatic behavior / 自动行为**: notify user if update available, do NOT auto-update without confirmation.
+  有更新时通知用户，不自动更新。
+- **Keyword triggers / 关键词触发**:
+  - "检查治理更新" / "check governance updates"
+  - "同步治理逻辑" / "sync governance"
+  - "检查 agent 版本" / "check agent version"
 
 ## Sync Flow
 

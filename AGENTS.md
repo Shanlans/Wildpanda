@@ -1,6 +1,6 @@
 ﻿# AGENT Working Rules
 
-When you read this file everytime, Give the phrase: "Agents 正在加载".
+When you read this file everytime, Give the phrase: "Agents loading".
 
 ## 1) Scope
 - Repository root must be taken from runtime `cwd` and should match `project_profile.yaml -> project.repo_root`.
@@ -120,6 +120,8 @@ When you read this file everytime, Give the phrase: "Agents 正在加载".
 - Report build/test command results in the final update.
 - Flow-spec-first: if a code change modifies behavior in any function that is part of a documented flow in `master_spec/flow_spec/flow_catalog.md`, update the matching flow spec before writing implementation code. This is the default governance rule and must not require user re-confirmation each session.
 - Flow entry points are confirmed by the user. The agent traces the complete function-level call chain from the confirmed entry and documents it in the matching `master_spec/flow_spec/*.flow.md` before code changes are made.
+- Flow discovery: if a code-change task starts and `flow_catalog.md` has no active entries, or the modified files are not covered by any existing flow, run `skill/flow-discovery` before implementation. If the call-graph tool is not configured, prompt the user to set up `call_graph` in `project_profile.yaml`.
+- Call-graph-first: when the agent needs to understand function call relationships (debugging, impact analysis, refactoring, tracing), it must use `skill/call-graph` instead of manually reading code to trace calls. Fall back to manual reading only if the tool is not installed and the user declines to install it.
 - Governance propagation: after any change to files under `master_spec/`, apply the bootstrap/starter propagation check defined in `master_spec/initial_spec/initial_spec.md §7` before considering the change complete.
 
 ## 9) Skill Routing
@@ -211,4 +213,4 @@ Every pull request to Wildpanda must include:
 - Only the maintainer creates version tags on the merge commit.
 - Automated merge or auto-tag is not permitted.
 
-After all Agents file finished read, give "Agents 已加载完毕".
+After all Agents file finished read, give "Agents loaded".
