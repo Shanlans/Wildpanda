@@ -3,10 +3,13 @@
 All notable changes to Wildpanda are documented in this file.
 
 
-## [Unreleased]
+## [1.2.2] — 2026-04-13
 
-### Contributed from RAWHDR
-- Added Step 15 "Post-Release Sync Reminder" to governance-release skill — prompts user to run governance-sync immediately after release is merged and tagged
+### Fixed
+- Added Step 15 "Post-Release Sync Reminder" to governance-release skill — after release PR is merged and tagged, prompts user to run governance-sync immediately if inside a consuming project (#9)
+
+### Contributors
+- shanlan.shen (@Shanlans)
 
 ## [1.2.1] — 2026-04-10
 
