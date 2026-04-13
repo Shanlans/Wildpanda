@@ -35,7 +35,7 @@
 
 Built for [Claude Code](https://claude.ai/claude-code). Works with any LLM-based coding agent that reads markdown specs.
 
-> **Current version: v1.3.0**
+> **Current version: v1.3.1**
 
 ## 🤔 Why
 
