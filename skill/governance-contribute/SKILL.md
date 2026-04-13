@@ -27,14 +27,14 @@ Contribute governance improvements from a consuming project back to the upstream
    - `upstream_repo` must be defined. If missing → prompt and write, then continue.
    - `upstream_commit` should be defined. If missing → warn that contribution will be based on unknown baseline.
 
-## Trigger
-- **Manual only**: user invokes the skill when they want to contribute changes back.
-- **Keyword triggers** (any of these phrases activates this skill):
-  - "agent 更新"
-  - "agent 变更发布"
-  - "贡献回上游"
-  - "contribute back"
-  - "push changes upstream"
+## Trigger / 触发条件
+- **Manual only / 仅手动**: user invokes the skill when they want to contribute changes back.
+  用户想把本地改进推回上游时手动调用。
+- **Keyword triggers / 关键词触发** (any of these phrases activates this skill / 以下任意短语触发):
+  - "agent 更新" / "agent update"
+  - "agent 变更发布" / "agent publish changes"
+  - "贡献回上游" / "contribute back"
+  - "推送变更到上游" / "push changes upstream"
 
 ## Contribution Flow
 

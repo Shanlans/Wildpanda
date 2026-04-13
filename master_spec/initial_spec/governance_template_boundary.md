@@ -49,6 +49,8 @@
 - `skill/governance-sync/SKILL.md`
 - `skill/governance-contribute/SKILL.md`
 - `skill/governance-release/SKILL.md`
+- `skill/call-graph/SKILL.md`
+- `skill/flow-discovery/SKILL.md`
 
 ### 3.2 Instance-Owned
 - `project_profile.yaml`
