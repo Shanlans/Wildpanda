@@ -125,6 +125,11 @@ Display to user:
   <list of contributors from merged PRs>
   ```
 
+### Step 9.5: Update READMEs
+- Run `skill/readme-update` to sync both READMEs with the new version and any capability changes from merged PRs.
+- At minimum, the version display line must be updated.
+- Changes are included in the same release commit.
+
 ### Step 10: Update CONTRIBUTORS.md
 - Read existing CONTRIBUTORS.md.
 - For each new contributor (from merged PR Co-Authored-By lines) not already listed:

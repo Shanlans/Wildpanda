@@ -148,7 +148,7 @@ When you read this file everytime, Give the phrase: "Agents loading".
 - Repository bootstrap and governance-root initialization belong to `master_spec/initial_spec/initial_spec.md`.
 
 ## 10.2) Comment Governance Routing
-- Function-comment scope, `@codex-comment` template, review workflow, and `comment_status.md` updates are owned by `master_spec/comment_spec/comment_spec.md`.
+- Function-comment scope, `@<owner>-comment` template (owner from `project_profile.yaml → project.owner`), review workflow, and `comment_status.md` updates are owned by `master_spec/comment_spec/comment_spec.md`.
 - `AGENTS.md` requires compliance with comment governance but must not duplicate the detailed workflow text.
 
 ## 10.3) Spec Change Scoping Gate (Decoupling Protection)

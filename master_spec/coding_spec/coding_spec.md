@@ -78,7 +78,7 @@
 ## 5. Comment Rules Binding
 - This coding spec does not replace `master_spec/comment_spec/comment_spec.md`.
 - Function comment requirements, templates, and review workflow are governed only by comment spec.
-- Agent-authored function comments must keep `@codex-comment` signature per comment spec.
+- Agent-authored function comments must keep `@<owner>-comment` signature per comment spec (owner from `project_profile.yaml → project.owner`).
 
 ## 6. Formatting and Consistency
 - Keep line endings/encoding consistent with original file.

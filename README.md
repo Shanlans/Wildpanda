@@ -33,7 +33,7 @@
 
 ---
 
-Built for [Claude Code](https://claude.ai/claude-code). Works with any LLM-based coding agent that reads markdown specs.
+Works with any LLM-based coding agent that reads markdown specs.
 
 > **Current version: v1.3.1**
 
@@ -90,7 +90,7 @@ Four reusable profiles define what "done" means for different change types:
 ### Code Change Governance
 
 - **Comment coverage trigger** — if agent reads a source function and finds missing/non-compliant comments, it must complete them in the same task. Progressive coverage, not retroactive bulk.
-- **Function-level comment template** — standard `@codex-comment` format: input/output interface, key steps, key params, state/dependencies.
+- **Function-level comment template** — standard `@<owner>-comment` format (owner from `project_profile.yaml`): input/output interface, key steps, key params, state/dependencies.
 - **Comment review workflow** — 3-state review: `approved` → `pending` → rework. User can reject and force re-verification.
 - **Memory & resource cleanup rules** — new/delete pairing, RAII preference, cross-stage lifecycle context.
 - **Read audit trail** — per-task record of which files were read, why, and what was done about it. Gate blocks `ImplementationDone` if audit is empty.
@@ -222,6 +222,22 @@ powershell -ExecutionPolicy Bypass \
 | **governance-release** | Package merged PRs into a release | Manual: "prepare release" |
 | **call-graph** | Query function call relationships | Auto (when tracing calls) / Manual: "call graph" |
 | **flow-discovery** | Discover and document call flows | Auto (empty flow catalog) / Manual: "discover flow" |
+| **readme-update** | Sync READMEs with current framework state | Auto (release/contribute) / Manual: "update readme" |
+
+## 💬 Command Reference
+
+Trigger governance skills and actions by saying any of these phrases in your chat session:
+
+| Action | Commands |
+|---|---|
+| **Bootstrap governance** | "bootstrap governance", "initialize governance", "onboard new project" |
+| **Sync from upstream** | "sync governance", "check governance updates" |
+| **Contribute changes** | "contribute back", "push changes upstream" |
+| **Prepare release** | "prepare release", "release", "cut a release" |
+| **Query call graph** | "call graph", "who calls", "show callers", "trace calls" |
+| **Discover flows** | "discover flow", "analyze flow", "trace call chain", "generate flow spec" |
+| **Update README** | "update readme", "sync readme", "refresh readme" |
+| **Strict validation** | Include `???` in your message to force full 8-step governance pipeline |
 
 ## 🔄 Governance Lifecycle
 
@@ -264,7 +280,8 @@ skill/                                 # Skills
 ├── governance-contribute/             # 📤 Contribute
 ├── governance-release/                # 📦 Release
 ├── call-graph/                        # 🔍 Call graph analysis
-└── flow-discovery/                    # 🗺️ Flow discovery
+├── flow-discovery/                    # 🗺️ Flow discovery
+└── readme-update/                    # 📝 README sync
 ```
 
 ## 🏗️ Key Design Decisions
@@ -281,7 +298,7 @@ skill/                                 # Skills
 
 | | |
 |---|---|
-| **Primary target** | Claude Code (Anthropic) |
+| **Primary target** | LLM coding agents (Claude Code, Cursor, etc.) |
 | **Also works with** | Any LLM coding agent that reads markdown |
 | **OS** | Windows (PowerShell bootstrap), Linux/macOS (manual or adapt scripts) |
 | **Dependencies** | None for core — pure markdown + YAML |
