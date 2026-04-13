@@ -35,7 +35,7 @@
 
 为 [Claude Code](https://claude.ai/claude-code) 构建。兼容任何能读取 Markdown 规范的 LLM 编程 Agent。
 
-> **当前版本：v1.3.0**
+> **当前版本：v1.3.1**
 
 ## 🤔 为什么
 

@@ -2,6 +2,16 @@
 
 All notable changes to Wildpanda are documented in this file.
 
+## [1.3.1] — 2026-04-13
+
+### Changed
+- Rewrote README.md and README_zh.md with full feature coverage: expanded from 7 summary points to 8 detailed sections (task lifecycle, multi-session safety, acceptance profiles, code change governance, spec-first & flow docs, bootstrap, drift prevention, safety boundaries) (#16)
+- Added version display line and Star History chart to both READMEs (#16)
+- Updated flow diagram with governance decision and rule reconfirmation steps (#16)
+
+### Contributors
+- Shanlan (@Shanlans)
+
 
 ## [1.3.0] — 2026-04-13
 
